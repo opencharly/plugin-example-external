@@ -1,7 +1,5 @@
-version: 2026.232.0520
 plugin-example-external:
     candy:
-        version: 2026.176.1200
         description: |-
             Reference DUAL-PLACEMENT charly plugin — ONE provider, two placements. Its
             importable provider package (NewProvider/NewMeta, serving the externalprobe
