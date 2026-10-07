@@ -2,10 +2,9 @@
 // it provides. It is the SINGLE SOURCE for this plugin's params, used two ways (the
 // same contract the built-in exampleprobe and core `spec` use):
 //
-//  1. GENERATE the Go param struct — `cue exp gengotypes` over this file once the schema→Go pipeline
-//     (`internal/schemagen -mode=concat -pkg=params` in opencharly/spec) has spliced a
-//     `package params` + `@go(params)` header on and `-mode=retag` has doubled the json
-//     tags with yaml tags, emits
+//  1. GENERATE the Go param struct — the schema→Go pipeline concatenates this file under a
+//     `package params` + `@go(params)` header and generates the Go struct from it,
+//     emits
 //     params/cue_types_gen.go, so the plugin decodes plugin_input into a TYPED
 //     struct, never a hand-parsed map[string]any.
 //  2. VALIDATE authored input AT RUNTIME — the plugin SERVES this source over the
